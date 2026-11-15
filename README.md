@@ -86,3 +86,35 @@ By focusing on **linked lists** (for dynamic insertion/deletion) and **recursion
 ## Submission
 Once the lab is complete, all tests are passing, and you've pushed the completed code to 
 your forked repo on GitHub, submit your GitHub repo through Canvas using CodeGrade.
+
+## Running the Lab
+
+This project uses Python 3 and requires no external packages.
+
+Run the demonstration:
+```bash
+python3 main.py
+```
+
+The demonstration creates a linked list containing 10, 20, and 30.
+It prints the original list, a sum of 60, search results for an
+existing and missing ID, and the reversed list.
+
+## Running Tests
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+The five tests check front insertion, summing an empty and populated
+list, searching, and reversing.
+
+## Implementation Notes
+
+Each node stores data and a reference to the next node.
+The linked list tracks its first node through `head`.
+
+Sum, search, and reverse use recursion to demonstrate processing
+one node at a time. Each recursive helper has a base case that
+stops when it reaches the end of the list. Reversal updates the
+existing node links in place.
